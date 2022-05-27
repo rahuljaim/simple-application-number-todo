@@ -1,3 +1,15 @@
+.form-floating label  {
+text-align: end;
+right:0;
+}
+.btn-close{
+  width:auto;
+  text-align: end;
+  background: none;
+ 
+}
+
+
 .App {
   text-align: center;
 }
