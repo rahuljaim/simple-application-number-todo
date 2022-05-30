@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import mock from "./mock";
 
-
 const App = () => {
   const [input, setInput] = useState("");
   const [ticketdata, setTicketdata] = useState([]);
@@ -30,22 +29,27 @@ const App = () => {
   }
 
   function addTicketHandler() {
-    if(ticketdata.length!==5){
+    if (ticketdata.length !== 5) {
       let tempArr = ticketdata.concat(input);
-    setTicketdata(tempArr);
+      setTicketdata(tempArr);
     }
-    
+    if (ticketdata.length === 5) {
+      alert("Ticket Limit Reached");
+    }
   }
   function deleteHandler(id) {
-    let another = ticketdata.filter((e,i) => i !== id);
+    let another = ticketdata.filter((e, i) => i !== id);
     setTicketdata(another);
   }
-  function randomGenerator(){
-    if(ticketdata.length!==5){
-      let newvalue = parseInt(Math.random()*100000)*10;
+  function randomGenerator() {
+    if (ticketdata.length !== 5) {
+      let newvalue = parseInt(Math.random() * 100000) * 10;
       let tempArr = ticketdata.concat(newvalue);
-      
-    setTicketdata(tempArr);
+
+      setTicketdata(tempArr);
+    }
+    if (ticketdata.length === 5) {
+      alert("Ticket Limit Reached");
     }
   }
 
@@ -136,7 +140,11 @@ const App = () => {
               <h5 className="card-title">
                 Click the circle to generate random tickets
               </h5>
-              <button type="button" className="btn btn-primary rounded-circle" onClick={randomGenerator}>
+              <button
+                type="button"
+                className="btn btn-primary rounded-circle"
+                onClick={randomGenerator}
+              >
                 <div
                   className="spinner-border"
                   style={{
@@ -168,9 +176,11 @@ const App = () => {
                       type="button"
                       class="btn-close"
                       aria-label="Close"
-                      value = {item}
+                      value={item}
                       style={{ boxShadow: "none" }}
-                      onClick={function(){return deleteHandler(index)}}
+                      onClick={function () {
+                        return deleteHandler(index);
+                      }}
                     >
                       <i class="fa-solid fa-trash-can"></i>
                     </button>
