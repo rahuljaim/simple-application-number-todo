@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/simple-application-number-todo/static/css/main.94b71fc3.css",
+    "main.js": "/simple-application-number-todo/static/js/main.57c3481c.js",
+    "static/js/787.cb4b1c79.chunk.js": "/simple-application-number-todo/static/js/787.cb4b1c79.chunk.js",
+    "index.html": "/simple-application-number-todo/index.html",
+    "main.94b71fc3.css.map": "/simple-application-number-todo/static/css/main.94b71fc3.css.map",
+    "main.57c3481c.js.map": "/simple-application-number-todo/static/js/main.57c3481c.js.map",
+    "787.cb4b1c79.chunk.js.map": "/simple-application-number-todo/static/js/787.cb4b1c79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94b71fc3.css",
+    "static/js/main.57c3481c.js"
+  ]
+}
